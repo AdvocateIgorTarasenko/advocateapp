@@ -29,7 +29,7 @@ A multi-page website for advertising lawyer services, showcasing legal expertise
 
 ### Installation
 
-1. Clone this repository: `git clone https://github.com/MaksymChukhrai/advocatapp/`
+1. Clone this repository: `git clone https://github.com/AdvocateIgorTarasenko/advocateapp/`
 
 2. Install dependencies: `npm install`
 
@@ -44,14 +44,14 @@ A multi-page website for advertising lawyer services, showcasing legal expertise
 The production version of the project will be automatically built and deployed to GitHub Pages, in the `gh-pages` branch, each time the `main` branch is updated (e.g., after a direct push or an accepted pull request).
 
 ```json
- "homepage": "https://maksymchukhrai.github.io/advocatapp/",
+ "homepage": "https://advocateigortarasenko.github.io/advocateapp/",
   "scripts": {
     "start": "parcel src/index.html",
     "build": "parcel build src/*.html --public-url /advocatapp/"
   },
 ```
 
-[Live Github URL page](https://maksymchukhrai.github.io/advocatapp/)
+[Live Github URL page](https://advocateigortarasenko.github.io/advocateapp/)
 
 ### Building a Production Version
 
