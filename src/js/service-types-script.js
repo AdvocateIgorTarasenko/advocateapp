@@ -13,11 +13,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const currentPageUrl = window.location.pathname.split('/').pop();
   const selectElement = document.getElementById('service');
 
+  const specialPages = ['administrative-law.html', 'automotive-law.html'];
+  const resolvedPageUrl = specialPages.includes(currentPageUrl)
+    ? 'administrative-law.html'
+    : currentPageUrl;
+
   if (selectElement) {
     const options = selectElement.options;
     for (let i = 0; i < options.length; i++) {
       const optionUrl = options[i].getAttribute('data-url');
-      if (optionUrl === currentPageUrl) {
+      if (optionUrl === resolvedPageUrl) {
         options[i].selected = true;
         break;
       }
@@ -33,4 +38,3 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-  
