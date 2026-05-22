@@ -281,8 +281,15 @@
     flex-direction: column;
     .pc-column-service-items {
       margin-bottom: -18px;
+
+      .service-pricing-table {
+        td {
+          font-size: 16px;
+        }
+      }
+
       .service-item {
-        p {
+        p, b, li {
           font-size: 16px;
         }
         .service-details {

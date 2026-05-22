@@ -20,7 +20,7 @@
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 1.4; 
+  line-height: 1.4;
   margin-bottom: 20px;
 }
 
@@ -35,9 +35,8 @@
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
-  
   }
-  
+
   .select-arrow {
     position: absolute;
     top: 43%;
@@ -67,7 +66,7 @@ select {
     padding: 0px 15px;
     padding-bottom: 50px;
     background: var(--feedback-background-color);
-   
+
 }
 
 .main-order-section-pc,
@@ -127,34 +126,34 @@ margin-bottom: 4px;
 }
 
 .tax-img{
-    background: var(--gradient-service-img),url('../images/tax-law.webp') lightgray 50% / cover no-repeat; 
+    background: var(--gradient-service-img),url('../images/tax-law.webp') lightgray 50% / cover no-repeat;
 }
 
 .fintech-img{
-    background: var(--gradient-service-img),url('../images/fintech.webp') lightgray 50% / cover no-repeat; 
+    background: var(--gradient-service-img),url('../images/fintech.webp') lightgray 50% / cover no-repeat;
 }
 
 .military-img{
-    background: var(--gradient-service-img),url('../images/military-law.webp') lightgray 50% / cover no-repeat; 
+    background: var(--gradient-service-img),url('../images/military-law.webp') lightgray 50% / cover no-repeat;
 }
 
 .business-law-img{
-    background: var(--gradient-service-img),url('../images/labor-image_2x.webp') lightgray 50% / cover no-repeat; 
+    background: var(--gradient-service-img),url('../images/labor-image_2x.webp') lightgray 50% / cover no-repeat;
 }
 .labor-img{
-    background: var(--gradient-service-img),url('../images/area-8_352x234.webp') lightgray 50% / cover no-repeat; 
+    background: var(--gradient-service-img),url('../images/area-8_352x234.webp') lightgray 50% / cover no-repeat;
 }
 .debt-recovery-img{
-    background: var(--gradient-service-img),url('../images/debt-recovery.webp') lightgray 50% / cover no-repeat;  
+    background: var(--gradient-service-img),url('../images/debt-recovery.webp') lightgray 50% / cover no-repeat;
 }
 
 .debtor-protection-img{
-    background: var(--gradient-service-img),url('../images/debtor-protection.webp') lightgray 50% / cover no-repeat;  
+    background: var(--gradient-service-img),url('../images/debtor-protection.webp') lightgray 50% / cover no-repeat;
 }
 
 .migration-serv-container article{
     margin-top: 20px;
-   
+
 }
 .migration-serv-container article p{
     color: var(--black-main-text-color);
@@ -175,11 +174,56 @@ margin-bottom: 4px;
 
 font-family: 'Roboto';
 font-weight: 700;
-line-height: 1.4; 
+line-height: 1.4;
 margin-top: 20px;
 margin-bottom: 20px;
 
 }
+
+.services-link-btn {
+  display: block;
+  text-align: center;
+}
+
+.service-list-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  list-style: circle;
+}
+
+.service-list-details li {
+  list-style: inherit;
+  margin-left: 14px;
+  font-size: 12px;
+}
+
+.service-pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+  background-color: white;
+  border: 1px solid var(--bronze-button);
+}
+
+.service-pricing-table thead {
+  background: var(--main-order-gradient);
+}
+
+.service-pricing-table th {
+  padding: 14px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 2px solid var(--bronze-button);
+}
+
+.service-pricing-table td {
+  padding: 14px;
+  border-bottom: 1px solid var(--bronze-button);
+  font-size: 12px;
+}
+
 .intel-list{
     margin-bottom: 20px;
 }
@@ -233,6 +277,12 @@ margin-bottom: 20px;
 .service-item{
 margin-top: 18px;
 margin-bottom: 18px;
+}
+
+.service-item-mark {
+  background: var(--main-order-gradient);
+  padding: 12px 12px 12px 16px;
+  border-left: 2px solid var(--bronze-button);
 }
 
 .service-item p{
