@@ -135,14 +135,54 @@
     width: 352px;
     height: 400px;
   }
-  .migration-img-pc {
-    background: linear-gradient(
-        0deg,
-        rgba(135, 125, 125, 0.4) 0%,
-        rgba(135, 125, 125, 0.4) 100%
-      ),
-      url('../images/migration-image_2x.webp') lightgray 50% / cover no-repeat;
+
+  .service-types-img-pc,
+  .video-wrapper{
+    width:100%;
+    height:360px;
+    position:relative
   }
+  .video-wrapper video {
+    width:100%;
+    height:100%;
+    object-fit:contain;
+  }
+  .service-types-img-pc>* {
+    position: relative;
+    z-index: 1
+  }
+
+  .military-img-pc.service-types-img-pc::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    filter: blur(4px);
+    z-index: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(135, 125, 125, 0.4) 0%,
+      rgba(135, 125, 125, 0.4) 100%
+    ),
+    url('../images/migration-image_2x.webp') lightgray 50% / cover no-repeat;
+  }
+
+  @media screen and (width>=1280px) {
+
+    .service-types-img-pc,
+    .video-wrapper {
+      width: 352px;
+      height: 460px
+    }
+  }
+
+  // .migration-img-pc {
+  //   background: linear-gradient(
+  //       0deg,
+  //       rgba(135, 125, 125, 0.4) 0%,
+  //       rgba(135, 125, 125, 0.4) 100%
+  //     ),
+  //     url('../images/migration-image_2x.webp') lightgray 50% / cover no-repeat;
+  // }
 
   .criminal-img-pc {
     background: linear-gradient(
