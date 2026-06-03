@@ -47,6 +47,7 @@ The production version of the project will be automatically built and deployed t
  "homepage": "https://advocateigortarasenko.github.io/advocateapp/",
   "scripts": {
     "start": "parcel src/index.html",
+    "build:cpanel": "parcel build src/*.html",
     "build": "parcel build src/*.html --public-url /advocatapp/"
   },
 ```
@@ -56,27 +57,39 @@ The production version of the project will be automatically built and deployed t
 ### Building a Production Version
 
 ## Deploying to Host IQ
+
 This application with the domain igor-tarasenko.com is hosted by HostIQ.
 
-## Preparing Files and Deploying to Host IQ
-After you've finished working with the project files and verified the correct functionality at http://localhost:1234, follow these steps:
+## Automated cPanel Deployment (main branch)
 
-1. In the `package.json` file, change the root directory name (also the base URL). Specifically, the base URL should be set to `/`, as your project is in the root directory of your site (/public_html) on the provider's server.
-Modify the build script in `package.json` as follows:
+Pushes to `main` can be deployed automatically by GitHub Actions using the workflow in `.github/workflows/deploy-cpanel.yml`.
+
+### Required GitHub Secrets
+
+- `CPANEL_HOST`
+- `CPANEL_USER`
+- `CPANEL_SSH_KEY`
+- `CPANEL_TARGET_PATH` (for this project: `/home2/igortar1/public_html`)
+
+### Deployment behavior
+
+- Builds project with `npm run build:cpanel`.
+- Copies `dist/*` directly into `/public_html` (not into `/public_html/dist`).
+- Also deploys `src/mail.php` and `src/phpmailer/**` without modifying PHP files.
+- Uses selective cleanup for old build artifacts while preserving hosting system entries such as `.well-known`, `cgi-bin`, and `.htaccess`.
+
+### Manual build for cPanel
+
+Run this command locally if you need a manual artifact check before push:
+
+```bash
+npm run build:cpanel
 ```
-"scripts": {
-    "start": "parcel src/.html",
-    "build": "parcel build src/*.html --public-url /"
-},
-```
 
-2. Delete excess cache files from the `.parcel-cache` folder and files from the `dist` folder.
-
-3. In the VSCode console, run the command `npm run build` to build the Production version of the project. After compilation, the project files will be assembled in the `dist` folder.
-4. Using FTP access to the server, transfer all files from the dist folder to the server in the `/public_html` folder. If necessary, transfer the src\mail.php file and `src\phpmailer` folder separately, as they are not included in the Production build package.
-5. After uploading the files to the server, check the functionality using [the project domain](https://igor-tarasenko.com/).
+Then confirm output in `dist/`.
 
 ## License
+
 This project is open-source and available under the MIT License.
 
 ## Acknowledgments

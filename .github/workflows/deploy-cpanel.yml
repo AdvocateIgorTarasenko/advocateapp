@@ -1,0 +1,46 @@
+name: Deploy to cPanel
+
+on:
+  push:
+    branches: [main]
+
+concurrency:
+  group: deploy-cpanel-main
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build for cPanel root
+        run: npm run build:cpanel
+
+      - name: Prepare deployment bundle
+        run: |
+          rm -rf deploy
+          mkdir -p deploy/phpmailer
+          cp -a dist/. deploy/
+          cp src/mail.php deploy/mail.php
+          cp -a src/phpmailer/. deploy/phpmailer/
+
+      - name: Deploy with selective cleanup
+        uses: burnett01/rsync-deployments@7.0.2
+        with:
+          switches: -avzr --delete --omit-dir-times --no-perms --no-owner --no-group --exclude=.well-known/*** --exclude=cgi-bin/*** --exclude=.htaccess
+          path: deploy/
+          remote_path: ${{ secrets.CPANEL_TARGET_PATH }}/
+          remote_host: ${{ secrets.CPANEL_HOST }}
+          remote_user: ${{ secrets.CPANEL_USER }}
+          remote_key: ${{ secrets.CPANEL_SSH_KEY }}
