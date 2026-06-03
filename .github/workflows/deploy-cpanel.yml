@@ -27,7 +27,7 @@ jobs:
       - name: Build for cPanel root
         run: npm run build:cpanel
 
-      - name: Deploy to cPanel via FTP
+      - name: Deploy build artifacts to cPanel via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -37,13 +37,12 @@ jobs:
           server-dir: /public_html/
           dangerous-clean-slate: false
 
-      - name: Deploy PHP files via FTP
+      - name: Deploy phpmailer library to cPanel via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./src/
-          server-dir: /public_html/
+          local-dir: ./src/phpmailer/
+          server-dir: /public_html/phpmailer/
           dangerous-clean-slate: false
-          exclude: "*.html|*.scss|*.js"
