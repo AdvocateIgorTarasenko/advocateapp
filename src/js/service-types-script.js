@@ -13,10 +13,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const currentPageUrl = window.location.pathname.split('/').pop();
   const selectElement = document.getElementById('service');
 
-  const specialPages = ['administrative-law.html', 'automotive-law.html'];
-  const resolvedPageUrl = specialPages.includes(currentPageUrl)
-    ? 'administrative-law.html'
-    : currentPageUrl;
+  const pageAliases = {
+    'administrative-law.html': 'administrative-law.html',
+    'automotive-law.html': 'administrative-law.html',
+    'military-law.html': 'military-law.html',
+    'military-lawyer.html': 'military-law.html',
+  };
+
+  const resolvedPageUrl = pageAliases[currentPageUrl] || currentPageUrl;
 
   if (selectElement) {
     const options = selectElement.options;

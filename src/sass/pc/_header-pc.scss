@@ -1,4 +1,8 @@
 @media screen and (min-width: 1280px) {
+:root {
+    --anchor-scroll-offset: 130px;
+}
+
 .mobile-menu-open{
     display:none;
 }
@@ -61,10 +65,10 @@ header{
 }
 
 .header-menu_link {
-    text-decoration: none; 
-    position: relative; 
+    text-decoration: none;
+    position: relative;
   }
-  
+
   .header-menu_link::after {
     content: '';
     position: absolute;
@@ -73,12 +77,12 @@ header{
     height: 2px;
     bottom: -4px;
     left: 0;
-    background-color:var(--caption-grey); 
+    background-color:var(--caption-grey);
     opacity: 0; /* Изначально невидимо */
 
     transition: transform 0.4s ease-out;
   }
-  
+
   .header-menu_link:hover::after {
 transform: scaleX(1);
     opacity: 1; /* Появляется при наведении */

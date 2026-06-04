@@ -46,7 +46,7 @@ The production version of the project will be automatically built and deployed t
 ```json
  "homepage": "https://advocateigortarasenko.github.io/advocateapp/",
   "scripts": {
-    "start": "parcel src/index.html",
+    "start": "parcel src/*.html",
     "build:cpanel": "parcel build src/*.html",
     "build": "parcel build src/*.html --public-url /advocatapp/"
   },
