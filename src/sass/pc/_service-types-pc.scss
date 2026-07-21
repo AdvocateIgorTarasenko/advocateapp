@@ -9,9 +9,9 @@
 }
 
 .video-wrapper video {
-  width:100%;
-  height:100%;
-  object-fit:contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .separator {
@@ -49,7 +49,6 @@
 }
 
 @media screen and (min-width: 1280px) {
-
   .anchors-list {
     flex-direction: row;
   }
@@ -122,14 +121,14 @@
       }
     }
   }
-  .services-btn:hover{
+  .services-btn:hover {
     background: var(--button-hover-gradient);
-    color:var(--header-white-color);
+    color: var(--header-white-color);
     cursor: pointer;
   }
-  .services-btn:active{
+  .services-btn:active {
     background: var(--button-active-gradient);
-    color:var(--header-white-color);
+    color: var(--header-white-color);
   }
 
   .migration-serv-container article {
@@ -201,34 +200,44 @@
   }
 
   .service-types-img-pc,
-  .video-wrapper{
+  .video-wrapper {
     width: 352px;
     height: 460px;
-    position:relative;
+    position: relative;
     margin-bottom: 0;
   }
 
-  .service-types-img-pc>* {
+  .service-types-img-pc > * {
     position: relative;
-    z-index: 1
+    z-index: 1;
   }
-
+  .migration-img-pc {
+    background:
+      linear-gradient(
+        0deg,
+        rgba(135, 125, 125, 0.4) 0%,
+        rgba(135, 125, 125, 0.4) 100%
+      ),
+      url('../images/migration-image_2x.webp') lightgray 50% / cover no-repeat;
+  }
   .military-img-pc.service-types-img-pc::before {
-    content: "";
+    content: '';
     position: absolute;
     inset: 0;
     filter: blur(4px);
     z-index: 0;
-    background: linear-gradient(
-      0deg,
-      rgba(135, 125, 125, 0.4) 0%,
-      rgba(135, 125, 125, 0.4) 100%
-    ),
-    url('../images/migration-image_2x.webp') lightgray 50% / cover no-repeat;
+    background:
+      linear-gradient(
+        0deg,
+        rgba(135, 125, 125, 0.4) 0%,
+        rgba(135, 125, 125, 0.4) 100%
+      ),
+      url('../images/migration-image_2x.webp') lightgray 50% / cover no-repeat;
   }
 
   .criminal-img-pc {
-    background: linear-gradient(
+    background:
+      linear-gradient(
         0deg,
         rgba(135, 125, 125, 0.4) 0%,
         rgba(135, 125, 125, 0.4) 100%
@@ -236,7 +245,8 @@
       url('../images/criminal-law-pc_2x.webp') lightgray 50% / cover no-repeat;
   }
   .tax-img-pc {
-    background: linear-gradient(
+    background:
+      linear-gradient(
         0deg,
         rgba(135, 125, 125, 0.4) 0%,
         rgba(135, 125, 125, 0.4) 100%
@@ -244,7 +254,8 @@
       url('../images/tax-image_2x.webp') lightgray 50% / cover no-repeat;
   }
   .fintech-img-pc {
-    background: linear-gradient(
+    background:
+      linear-gradient(
         0deg,
         rgba(135, 125, 125, 0.4) 0%,
         rgba(135, 125, 125, 0.4) 100%
@@ -252,7 +263,8 @@
       url('../images/fintech-image_2x.webp') lightgray 50% / cover no-repeat;
   }
   .civil-img-pc {
-    background: linear-gradient(
+    background:
+      linear-gradient(
         0deg,
         rgba(135, 125, 125, 0.4) 0%,
         rgba(135, 125, 125, 0.4) 100%
@@ -260,7 +272,8 @@
       url('../images/civil-image_2x.webp') lightgray 50% / cover no-repeat;
   }
   .admin-img-pc {
-    background: linear-gradient(
+    background:
+      linear-gradient(
         0deg,
         rgba(135, 125, 125, 0.4) 0%,
         rgba(135, 125, 125, 0.4) 100%
@@ -269,16 +282,19 @@
   }
 
   .intellectual-img-pc {
-    background: linear-gradient(
+    background:
+      linear-gradient(
         0deg,
         rgba(135, 125, 125, 0.4) 0%,
         rgba(135, 125, 125, 0.4) 100%
       ),
-      url('../images/intellectual-image_2x.webp') lightgray 50% / cover no-repeat;
+      url('../images/intellectual-image_2x.webp') lightgray 50% / cover
+        no-repeat;
   }
 
   .military-img-pc {
-    background: linear-gradient(
+    background:
+      linear-gradient(
         0deg,
         rgba(135, 125, 125, 0.4) 0%,
         rgba(135, 125, 125, 0.4) 100%
@@ -287,7 +303,8 @@
   }
 
   .debt-rec-img-pc {
-    background: linear-gradient(
+    background:
+      linear-gradient(
         0deg,
         rgba(135, 125, 125, 0.4) 0%,
         rgba(135, 125, 125, 0.4) 100%
@@ -296,7 +313,8 @@
   }
 
   .deb-pro-img-pc {
-    background: linear-gradient(
+    background:
+      linear-gradient(
         0deg,
         rgba(135, 125, 125, 0.4) 0%,
         rgba(135, 125, 125, 0.4) 100%
@@ -305,7 +323,8 @@
   }
 
   .labor-img-pc {
-    background: linear-gradient(
+    background:
+      linear-gradient(
         0deg,
         rgba(135, 125, 125, 0.4) 0%,
         rgba(135, 125, 125, 0.4) 100%
@@ -314,7 +333,8 @@
   }
 
   .business-img-pc {
-    background: linear-gradient(
+    background:
+      linear-gradient(
         0deg,
         rgba(135, 125, 125, 0.4) 0%,
         rgba(135, 125, 125, 0.4) 100%
@@ -372,7 +392,9 @@
       }
 
       .service-item {
-        p, b, li {
+        p,
+        b,
+        li {
           font-size: 16px;
         }
         .service-details {
