@@ -7,17 +7,17 @@
     "start": "parcel src/*.html",
     "build:cpanel": "parcel build src/*.html",
     "build:local": "npm run build:cpanel",
-    "build": "parcel build src/*.html --public-url /"
+    "build": "parcel build src/*.html --public-url /advocatapp/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/advocateigortarasenko.github.io/advocateapp.git"
+    "url": "git+https://github.com/AdvocateIgorTarasenko/advocateapp.git"
   },
   "keywords": [],
   "author": "Maksym Chukhrai <m.chukhrai@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/advocateigortarasenko.github.io/advocateapp/issues"
+    "url": "https://github.com/AdvocateIgorTarasenko/advocateapp/issues"
   },
   "dependencies": {
     "inputmask": "^5.0.8",
