@@ -22,11 +22,21 @@
 
 <link rel="canonical" href="https://igor-tarasenko.com/labor-law.html">
     
-  <!-- Favicon -->
+<!-- Favicon -->
 <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-touch-icon.png">
+<link rel="icon" type="image/svg+xml" href="./favicon/favicon.svg" />
+<link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png" />
 <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+<link rel="shortcut icon" href="./favicon/favicon.ico" />
 <link rel="manifest" href="./favicon/site.webmanifest">
+
+<!-- PWA / mobile home screen -->
+<meta name="theme-color" content="#67574b">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Ваш адвокат">
+<meta name="mobile-web-app-capable" content="yes">
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -202,7 +212,8 @@
 
   <!-- validation script -->
   <script src="./js/form-validate.js" type="module"></script>
-
+  <!-- PWA offline support -->
+  <script type="module" src="./js/register-sw.js"></script>
 
 </body>
 

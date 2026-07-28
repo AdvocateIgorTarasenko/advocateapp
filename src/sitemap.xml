@@ -125,4 +125,19 @@
     <priority>0.7</priority>
   </url>
 
+    <url>
+    <loc>https://igor-tarasenko.com/military-lawyer.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://igor-tarasenko.com/automotive-law.html</loc>
+    <lastmod>2026-07-21</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+
 </urlset>
