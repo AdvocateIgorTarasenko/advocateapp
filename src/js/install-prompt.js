@@ -23,7 +23,7 @@ function createBanner(text, buttonText, onAction) {
   const banner = document.createElement('div');
   banner.setAttribute('id', 'pwa-install-banner');
   banner.style.cssText = `
-    position: fixed; left: 12px; right: 12px; bottom: 84px; z-index: 9999;
+    position: fixed; left: 12px; right: 12px; bottom: 222px; z-index: 9999;
     background: #211e1e; color: #fffdfa; border-radius: 12px;
     padding: 14px 16px; display: flex; align-items: center; gap: 12px;
     box-shadow: 0 4px 16px rgba(0,0,0,0.35); font-family: 'Roboto', sans-serif;
